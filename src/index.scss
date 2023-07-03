@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #28222b;
+}
+
+.App{
+  max-width: 100%;
+  /* width: 100%; */
+  height: 100%;
+  
+  color: #fff;
+}
+
+.hero-add_menu {
+  cursor: pointer;
+  width: 180px;
+  height: 50px;
+  color: #fff;
+  background: #64c97c;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-btn{
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(247deg, #b20011, #b7d80b 18%, #7f0642, #066c6e 38%,#c3a016, #b9d3d6 68%); 
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  border: none;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animbtn 10s ease-in-out alternate-reverse infinite ;
+  .add-icon {
+    color: rgb(47, 240, 198);
+    font-size: 1.8rem;
+    animation: animbtn 10s ease-in-out alternate-reverse infinite ;
+  }
+}
+.minus-icon{
+  width: 4rem;
+  height: 4rem;
+  background: #a72b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40%;
+  border: none;
+  outline: none;
+  .icon{
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+.wrapper_data{
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #383838;
+  border-radius: 999px 300px 300px 999px;;
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .data_user{
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &:hover{
+    transition: .5s;
+    background: #4b4b4b;
+    .delete-btn{
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+}
+
+.delete_btn-box{
+  .delete-btn{
+    font-size: 1.5rem;
+    color: #f12d2d;
+    opacity: 0;
+    transition: .5s;
+    &:hover{
+      transition: .8s;
+      transform: scale(1.2);
+    }
+  }
+}
+
+@keyframes animbtn {
+  0%{
+    color: rgb(6, 110, 88);
+    background-position: 0% 0%; 
+  }
+  50%{
+    background-position: 100% 100%;
+  }
+  100%{
+    background-position: 0% 0%;
+  }
+}
